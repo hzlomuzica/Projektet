@@ -27,6 +27,7 @@ body {
 
 header {
     font-family: Bungee Shade;
+    color: #e5e5e5;
     font-size: 3.8vw;
 }
 
@@ -41,7 +42,7 @@ header {
 .menu > div {
     background-color: lightgray;
     color: black;
-    padding: 18px;
+    padding: 16px;
     border-radius: 10px;
     font-family: Barlow Condensed;
     font-size: 2.4vw;
@@ -183,7 +184,7 @@ article {
     background-color: #ac0303;
     color: #eae4dd;
     border-radius: 20px 0 20px 20px;
-    padding: 2vh 1.5vw;
+    padding: 2.5vh;
     grid-column: 1;
 
     display: flex;
@@ -194,7 +195,7 @@ article {
     background-color: #ac0303;
     color: #eae4dd;
     border-radius: 20px 20px 20px 0;
-    padding: 2vh 1.5vw;
+    padding: 2.5vh;
     grid-column: 3 / 4;
 
     display: flex;
@@ -222,7 +223,7 @@ article {
     background-color: #ac0303;
     color: #eae4dd;
     border-radius: 20px 20px 0 20px;
-    padding: 2vh 1.5vw;
+    padding: 2.5vh;
     grid-column: 5 / 6;
     grid-row: 1;
 }
@@ -265,7 +266,7 @@ article {
     border-radius: 20px 20px 20px 0;
     grid-column: 1;
     grid-row: 1;
-    padding: 2vh 1.5vw;
+    padding: 2.5vh;
 
     display: flex;
     align-items: center;
@@ -277,7 +278,7 @@ article {
     border-radius: 0 20px 20px 20px;
     grid-column: 2;
     grid-row: 1;
-    padding: 2vh 1.5vw;
+    padding: 2.5vh;
 
     display: flex;
     align-items: center;
@@ -303,7 +304,7 @@ article {
     border-radius: 20px 20px 0 20px;
     grid-column: 4;
     grid-row: 1;
-    padding: 2vh 1.5vw;
+    padding: 2.5vh;
 
     display: flex;
     align-items: center;
@@ -389,6 +390,7 @@ footer {
     }
 
     #lust_for_life, #chemtrails_over_the_country_club {
+        display: grid;
         grid-template-columns: 1.4fr 1fr;
         grid-template-rows: auto;
         gap: 1vh;
@@ -462,6 +464,7 @@ footer {
     .song_list .first, .first_2 {
         border-radius: 0 20px 0 0;
     }
+
     .show_hover {
         display: none;
     }
@@ -469,16 +472,17 @@ footer {
     .cover img {
         object-fit: contain;
         object-position: top;
+        border-radius: 20px 0 0 20px;
     }
 
     #lust_for_life .cover {
         background-color: #eae4dd;
-        border-radius: 20px 0 0 20px
+        border-radius: 20px 0 0 20px;
     }
 
     #chemtrails_over_the_country_club .cover {
         background-color: #e6e6e6;
-        border-radius: 20px 0 0 20px
+        border-radius: 20px 0 0 20px;
     }
 }
 
@@ -508,6 +512,133 @@ footer {
         font-size: 2.2vw;
     }
 }
+
+/* Phone */
+@media (max-width: 500px) {
+    body {
+        padding: 0;
+    }
+
+    .container-1 {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .menu > div {
+        padding: 13px;
+    }
+
+    #lust_for_life, #chemtrails_over_the_country_club {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .album_data {
+        grid-column: 1 / 3;
+        grid-row: 3;
+    }
+
+    .cover {
+        grid-column: 1 / 3;
+        
+    }
+
+    #lust_for_life .cover {
+        background-color: transparent;
+    }
+
+    #chemtrails_over_the_country_club .cover {
+        background-color: transparent;
+    }
+
+    .cover img {
+        display: block;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .song_list {
+        grid-column: 1 / 3;
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .song_list .first, .first_2 {
+        border-radius: 0 0 0 20px;
+    }
+
+    .anecdotes_album1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .anecdotes_album1 .top_right_90 {
+        grid-column: 1;
+    }
+
+    .anecdotes_album1 .two_wide {
+        grid-column: 2 / 4;
+    }
+
+    .anecdotes_album2 {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .anecdotes_album2 .bottom_left_90 {
+        grid-column: 1;
+    }
+
+    .anecdotes_album2 .box_2 {
+        grid-column: 2;
+    }
+
+    .jack_antonoff {
+        grid-column: 1;
+    }
+    
+    .box_4 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+}
+
+/* Phone font-size */
+@media (max-width: 500px) {
+    body {
+        font-size: 3.6vw;
+    }
+
+    .menu > div {
+        font-size: 3.6vw;
+    }
+
+    .album_data h1 {
+        font-size: 6.4vw;
+    }
+
+    .album_data h2 {
+        font-size: 5vw;
+    }
+
+    .song_list h2 {
+        font-size: 5vw;
+    }
+
+    .song_list ul {
+        font-size: 3.2vw;
+    }
+    .anecdotes_album1, .anecdotes_album2 {
+        font-size: 2.9vw;
+    }
+
+    footer {
+        font-size: 3vw;
+    }
+}
+
 
 
 
